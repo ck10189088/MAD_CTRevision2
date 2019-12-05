@@ -3,6 +3,7 @@
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14824"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -29,10 +30,29 @@
                             <outlet property="delegate" destination="6i4-Z1-i54" id="dhi-ht-H3c"/>
                         </connections>
                     </tableView>
+                    <connections>
+                        <segue destination="aUm-NB-5ND" kind="show" id="E8r-Qp-Gfc"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cSm-gB-GSL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="770" y="116"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="5CP-9A-PKj">
+            <objects>
+                <viewController id="aUm-NB-5ND" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="221-if-Wc2">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="z88-D7-UMl"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="Pdy-bQ-g40"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ZWt-JC-pz2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1726" y="116"/>
         </scene>
     </scenes>
 </document>
