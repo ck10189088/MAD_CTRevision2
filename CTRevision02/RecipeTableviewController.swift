@@ -11,15 +11,20 @@ import UIKit
 import CoreData
 
 class RecipeTableViewController : UITableViewController {
-    var recipe : [NSManagedObject] = []
-    var ingredient :[NSManagedObject] = []
+    var recipe : [Recipe] = []
+    var ingredient :[Ingredient] = []
     let appDelegate = (UIApplication.shared.delegate) as! AppDelegate
     let context = ((UIApplication.shared.delegate) as! AppDelegate).persistentContainer.viewContext
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        fetchRecipeData()
-        fetchIngredientData()
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        var addrecipevc:AddRecipeViewController = AddRecipeViewController() // create this var in order to call the method in AddRecipeViewController
+        recipe = addrecipevc.fetchRecipe()
+        
+        self.tableView.reloadData()
     }
     
     override func numberOfSections(in tableView: UITableView) -> Int {
@@ -27,14 +32,25 @@ class RecipeTableViewController : UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        <#code#>
+        return recipe.count
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        <#code#>
+        let cell = self.tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
+        let reciperow = recipe[indexPath.row]
+        cell.textLabel!.text = "\(reciperow.name), \(reciperow.preparationTime)"
+        let addrecipevc : AddRecipeViewController = AddRecipeViewController()
+        ingredient = addrecipevc.fetchIngredient(recipe: reciperow)
+        var s = ""
+        for ing in ingredient{
+            s += "\(ing.name)"
+        }
+        cell.detailTextLabel!.text = s
+        
+        return cell
     }
     
-    func fetchRecipeData(){
+    /*func fetchRecipeData(){
         
         let fetchrecipe = NSFetchRequest<NSManagedObject>(entityName: "CDRecipe")
         do{ // fetchrecipe confirm return list
@@ -51,5 +67,5 @@ class RecipeTableViewController : UITableViewController {
         }catch let error as NSError{
             print("Could not fetch from CDIngredient")
         }
-    }
+    }*/
 }
