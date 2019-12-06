@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		877D5E2B2399E51A00A59F06 /* AddRecipeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 877D5E2A2399E51A00A59F06 /* AddRecipeViewController.swift */; };
+		877D5E2D239A07A600A59F06 /* Recipe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 877D5E2C239A07A600A59F06 /* Recipe.swift */; };
+		877D5E2F239A07BD00A59F06 /* Ingredient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 877D5E2E239A07BD00A59F06 /* Ingredient.swift */; };
 		877E1084239901C500C6CBE1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 877E1083239901C500C6CBE1 /* AppDelegate.swift */; };
 		877E1086239901C500C6CBE1 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 877E1085239901C500C6CBE1 /* SceneDelegate.swift */; };
 		877E1088239901C500C6CBE1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 877E1087239901C500C6CBE1 /* ViewController.swift */; };
@@ -18,6 +21,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		877D5E2A2399E51A00A59F06 /* AddRecipeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddRecipeViewController.swift; sourceTree = "<group>"; };
+		877D5E2C239A07A600A59F06 /* Recipe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Recipe.swift; sourceTree = "<group>"; };
+		877D5E2E239A07BD00A59F06 /* Ingredient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ingredient.swift; sourceTree = "<group>"; };
 		877E1080239901C500C6CBE1 /* CTRevision02.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CTRevision02.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		877E1083239901C500C6CBE1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		877E1085239901C500C6CBE1 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -64,6 +70,9 @@
 				877E1085239901C500C6CBE1 /* SceneDelegate.swift */,
 				877E1087239901C500C6CBE1 /* ViewController.swift */,
 				877E1089239901C500C6CBE1 /* Main.storyboard */,
+				877D5E2A2399E51A00A59F06 /* AddRecipeViewController.swift */,
+				877D5E2C239A07A600A59F06 /* Recipe.swift */,
+				877D5E2E239A07BD00A59F06 /* Ingredient.swift */,
 				877E109A2399052000C6CBE1 /* RecipeTableviewController.swift */,
 				877E108F239901C700C6CBE1 /* Assets.xcassets */,
 				877E1091239901C700C6CBE1 /* LaunchScreen.storyboard */,
@@ -144,8 +153,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				877D5E2B2399E51A00A59F06 /* AddRecipeViewController.swift in Sources */,
 				877E109B2399052000C6CBE1 /* RecipeTableviewController.swift in Sources */,
+				877D5E2D239A07A600A59F06 /* Recipe.swift in Sources */,
 				877E1088239901C500C6CBE1 /* ViewController.swift in Sources */,
+				877D5E2F239A07BD00A59F06 /* Ingredient.swift in Sources */,
 				877E108E239901C500C6CBE1 /* CTRevision02.xcdatamodeld in Sources */,
 				877E1084239901C500C6CBE1 /* AppDelegate.swift in Sources */,
 				877E1086239901C500C6CBE1 /* SceneDelegate.swift in Sources */,
